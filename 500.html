@@ -1,51 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>404 Error - SB Admin</title>
-        <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <div id="layoutError">
-            <div id="layoutError_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-6">
-                                <div class="text-center mt-4">
-                                    <h1 class="display-1">500</h1>
-                                    <p class="lead">Internal Server Error</p>
-                                    <a href="index.html">
-                                        <i class="fas fa-arrow-left me-1"></i>
-                                        Return to Dashboard
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </main>
-            </div>
-            <div id="layoutError_footer">
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2023</div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-        <script src="js/scripts.js"></script>
-    </body>
+<html>
+<head>
+  <title>Portal Edukasi Sekolah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2c3e50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    h2 {
+      margin-top: 30px;
+      text-align: center;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      width: 300px;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      font-size: 18px;
+    }
+
+    .card p {
+      color: #555;
+      font-size: 14px;
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #3498db;
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portal Edukasi Sekolah</h1>
+    <p>Selamat datang di pusat informasi dan materi pelajaran sekolah</p>
+  </header>
+
+  <!-- Berita -->
+  <h2>Berita Sekolah</h2>
+  <div class="container">
+    <div class="card">
+      <h3>Upacara Hari Pendidikan Nasional</h3>
+      <p>Seluruh siswa mengikuti upacara di lapangan pada 2 Mei 2025...</p>
+      <a href="#">Baca Selengkapnya</a>
+    </div>
+    <div class="card">
+      <h3>Lomba Cerdas Cermat</h3>
+      <p>Tim kelas 8B berhasil meraih juara 1 lomba antar SMP se-kecamatan...</p>
+      <a href="#">Baca Selengkapnya</a>
+    </div>
+    <div class="card">
+      <h3>Perpustakaan Digital Dibuka</h3>
+      <p>Sekarang siswa bisa mengakses buku pelajaran secara online...</p>
+      <a href="#">Baca Selengkapnya</a>
+    </div>
+  </div>
+
+  <!-- Materi Pelajaran -->
+  <h2>Materi Pelajaran</h2>
+  <div class="container">
+    <div class="card">
+      <h3>Kelas 7 - Matematika</h3>
+      <p>Materi: Bilangan Bulat, Operasi Hitung Pecahan, Aljabar Dasar...</p>
+      <a href="#">Lihat Materi</a>
+    </div>
+    <div class="card">
+      <h3>Kelas 8 - IPA</h3>
+      <p>Materi: Struktur Sel, Zat Aditif, Gaya dan Gerak...</p>
+      <a href="#">Lihat Materi</a>
+    </div>
+    <div class="card">
+      <h3>Kelas 9 - Bahasa Inggris</h3>
+      <p>Materi: Descriptive Text, Tenses, Expression of Opinion...</p>
+      <a href="#">Lihat Materi</a>
+    </div>
+  </div>
+
+</body>
 </html>

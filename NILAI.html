@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Data Nilai Siswa</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      padding: 8px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    input[type="text"], input[type="number"] {
+      padding: 6px;
+      margin-right: 10px;
+    }
+    button {
+      padding: 6px 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Input Nilai Siswa</h2>
+
+  <form id="formNilai" onsubmit="tambahData(); return false;">
+    <input type="text" id="nama" placeholder="Nama Siswa" required>
+    <input type="text" id="mapel" placeholder="Mata Pelajaran" required>
+    <input type="number" id="nilai" placeholder="Nilai" required>
+    <button type="submit">Tambah</button>
+  </form>
+
+  <h2>Daftar Nilai Siswa</h2>
+  <table id="tabelNilai">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama</th>
+        <th>Mata Pelajaran</th>
+        <th>Nilai</th>
+        <th>Aksi</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Data awal -->
+      <tr>
+        <td>1</td>
+        <td>Andi</td>
+        <td>Matematika</td>
+        <td>85</td>
+        <td><button onclick="hapusBaris(this)">Hapus</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Sinta</td>
+        <td>Bahasa Indonesia</td>
+        <td>90</td>
+        <td><button onclick="hapusBaris(this)">Hapus</button></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Budi</td>
+        <td>IPA</td>
+        <td>78</td>
+        <td><button onclick="hapusBaris(this)">Hapus</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    let no = 4; // Karena sudah ada 3 data awal
+
+    function tambahData() {
+      const nama = document.getElementById("nama").value;
+      const mapel = document.getElementById("mapel").value;
+      const nilai = document.getElementById("nilai").value;
+
+      const tabel = document.getElementById("tabelNilai").getElementsByTagName('tbody')[0];
+      const baris = tabel.insertRow();
+
+      baris.innerHTML = `
+        <td>${no++}</td>
+        <td>${nama}</td>
+        <td>${mapel}</td>
+        <td>${nilai}</td>
+        <td><button onclick="hapusBaris(this)">Hapus</button></td>
+      `;
+
+      document.getElementById("formNilai").reset();
+    }
+
+    function hapusBaris(button) {
+      const row = button.parentNode.parentNode;
+      row.parentNode.removeChild(row);
+
+      // Reset nomor ulang (opsional)
+      const rows = document.querySelectorAll("#tabelNilai tbody tr");
+      no = 1;
+      rows.forEach((r) => {
+        r.cells[0].innerText = no++;
+      });
+    }
+  </script>
+
+</body>
+</html>
